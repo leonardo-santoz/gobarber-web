@@ -4,15 +4,15 @@ import SignIn from './pages/SignIn';
 // import SignUp from './pages/SignUp';
 import GlobalStyle from './styles/global';
 
-import AuthContext from './context/AuthContext';
+import { AuthProvider } from './context/AuthContext';
 
 const App: React.FC = () => {
   return (
     <>
-      <AuthContext.Provider value={{ name: 'Leonardo' }}>
+      <AuthProvider>
         {/* <SignUp /> */}
         <SignIn />
-      </AuthContext.Provider>
+      </AuthProvider>
 
       <GlobalStyle />
     </>
